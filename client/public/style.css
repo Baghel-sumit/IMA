@@ -3,6 +3,11 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+
+                                    /* Login section starts from here */
+
+
 .login{
     height: 100vh;
     display: flex;
@@ -43,6 +48,11 @@
     padding: 10px 20px;
     font-size: 18px;
 }
+
+
+                                    /* Forgot password section starts from here */
+
+
 .forgotpwd{
     height: 100vh;
     display: flex;
@@ -61,6 +71,11 @@
     font-size: 18px;
     margin: 10px;
 }
+
+
+                                    /* dashboard section starts from here */
+
+
 .dashboard{
     display: flex;
     justify-content: center;
@@ -68,5 +83,117 @@
     font-size: 24px;
     height: 100vh;
     text-transform: uppercase;
-    gap : 20px
+    gap : 20px;
+}
+
+
+
+                                    /* Profile section starts from here */
+
+
+.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+.profile h1{
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: 2px solid underline;
+}
+.profile .userinfo{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile .userinfo .data{
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 3;
+}
+.profile .userinfo .data p span{
+    text-transform: uppercase;
+    color: blueviolet;
+    font-weight: 600;
+}
+.profile .userinfo .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile .userinfo .image img{
+    width: 15rem;
+    border-radius: 10%;
+    margin: 10px;
+}
+.btn{
+    cursor: pointer;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    font-size: 24px;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.btn1{
+    background-color: brown;
+}
+
+
+                                    /* Edit profile section starts from here */
+
+
+.EditProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.EditProfile h1{
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: 2px solid underline;
+}
+.EditProfile form{
+    display: flex;
+    flex-direction: column;
+}
+.EditProfile form input{
+    width: 40vw;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+                                    /* Change password section starts from here */
+
+.changePwd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.changePwd h1{
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: 2px solid underline;
+}
+.changePwd form{
+    display: flex;
+    flex-direction: column;
+}
+.changePwd form input{
+    width: 40vw;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
 }
