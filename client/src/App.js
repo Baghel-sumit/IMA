@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './Components/Signup/Login';
 import Forgotpwd from './Components/Signup/forgotpwd';
 import Dashboard from './Components/dashboard/dashboard';
@@ -7,32 +7,42 @@ import Nopage from './Components/nopage/nopage.js';
 import Profile from './Components/profile/profile.js';
 import EditProfile from './Components/profile/editProfile';
 import ChangePwd from './Components/profile/ChangePwd';
+import Ledger from './Components/Ledger/ledger.js';
+import Investment from './Components/Investment/invest.js';
+import Users from './Components/Users/user.js';
+import Plans from './Components/Plans/plans.js';
 
 
 
 function App() {
-  return (
-    <BrowserRouter>
+  
 
+  return (
+    <Router>
+  
      <Routes>
 
-      <Route path='/' element={<Login/>} />
+      <Route index element={<Login/>} />
 
-      <Route path='/forgot-pwd' element={<Forgotpwd/>} />
+      <Route exact path='/forgot-pwd' element={<Forgotpwd/>} />
 
-      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route exact path='/dashboard' element={<Dashboard/>} />
 
-      <Route path='/user_profile' element={<Profile/>} />
+      <Route exact path='/user_profile' element={<Profile/>} />
 
-      <Route path='/user_profile/update_profile' element={<EditProfile/>} />
+      <Route exact path='/update_profile' element={<EditProfile/>} />
 
-      <Route path='/user_profile/changePwd' element={<ChangePwd/>} />
+      <Route exact path='/change_password' element={<ChangePwd/>} />
+      <Route exact path='/ledger' element={<Ledger/>} />
+      <Route exact path='/investments' element={<Investment/>} />
+      <Route exact path='/users_all' element={<Users/>} />
+      <Route exact path='/plans_all' element={<Plans/>} />
 
       <Route path='/*' element={<Nopage/>} />      
 
      </Routes>
 
-    </BrowserRouter>
+    </Router>
   );
 }
 

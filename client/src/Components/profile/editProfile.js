@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar/navbar';
 
 
 const EditProfile = () => {
@@ -29,13 +30,15 @@ const EditProfile = () => {
             email : info.email,
             phone : info.phone
         }
-        let path='/user_profile';
+        
 
-        navigate(path);
+        navigate(-1);
         
         event.preventDefault();
     }
   return (
+    <>
+    <Navbar/>
     <div className='EditProfile'>
 
       <h1>Update Profile</h1>
@@ -53,6 +56,7 @@ const EditProfile = () => {
       </form>
       
     </div>
+    </>
   )
 }
 

@@ -1,31 +1,20 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar/navbar';
 
 const Dashboard = () => {
-    const navigate = useNavigate();
-
-
-    function handleLogin(){
-        let path = '/';
-        navigate(path);
-    }
-
-
     
-    function handleProfile(){
-      let path = '/user_profile';
-      navigate(path);
-    }
-
   return (
-    <div className='dashboard'>
-      hi welcome to dashboard
+    <>
 
-      <button onClick={handleLogin}>Back to Login</button>
+      <Navbar/>
 
-      <button onClick={handleProfile}>Go to Profile section</button>
+      <div className='dashboard'>
 
-    </div>
+        hi welcome to dashboard
+
+      </div>
+    </>
   )
 }
 

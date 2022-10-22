@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const Login = () => {
+const Login = (props) => {
   const [emailPwd , setEmailPwd] = useState({
     email : '',
     password : ''
@@ -29,7 +29,7 @@ const Login = () => {
     
     let path = items.email.length > 0 && items.password.length > 0 ? '/dashboard':'/';
     navigate(path);
-    // event.preventDefault();
+    event.preventDefault();
   }
 
   return (

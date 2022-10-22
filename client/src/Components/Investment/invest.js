@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../Navbar/navbar'
 
-const Nopage = () => {
+const invest = () => {
   return (
     <>
     <Navbar/>
-    <div>
-      Invalid Page
+    <div className='invest'>
+      I am investments
     </div>
     </>
   )
 }
 
-export default Nopage
+export default invest

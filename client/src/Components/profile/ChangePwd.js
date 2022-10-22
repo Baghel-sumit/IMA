@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar/navbar';
+
 
 const ChangePwd = () => {
     const navigate = useNavigate();
@@ -12,7 +14,6 @@ const ChangePwd = () => {
 
     function handleProfile(event){
         
-        let path = '/user_profile';
 
         const oldPwd = passwords.old, newPwd = passwords.new;
 
@@ -20,7 +21,7 @@ const ChangePwd = () => {
 
             setMsg('Hey! you have successFully changed your password!');
 
-            navigate(path);
+            navigate(-1);
             
         }else if (oldPwd === newPwd){
 
@@ -47,6 +48,8 @@ const ChangePwd = () => {
     }
 
   return (
+    <>
+    <Navbar/>
     <div className='changePwd'>
 
       <h1>Change Password</h1>
@@ -64,7 +67,8 @@ const ChangePwd = () => {
       </form>
 
     </div>
+    </>
   )
 }
 
-export default ChangePwd
+export default ChangePwd;

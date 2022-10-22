@@ -1,8 +1,10 @@
 import React from 'react';
 import data from './data.js';
 
+
 const UserInfo = () => {
   return (
+    <>
     <div className='userinfo'>
       <div className='data'>
 
@@ -31,6 +33,7 @@ const UserInfo = () => {
         <button className='btn'>Upload Image</button>
       </div>
     </div>
+    </>
   )
 }
 

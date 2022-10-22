@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import UserInfo from './userInfo.js';
-
+import Navbar from '../Navbar/navbar.js';
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -12,17 +12,18 @@ const Profile = () => {
     }
 
     function handleEditP(){
-        let path = '/user_profile/update_profile';
+        let path = '/update_profile';
         navigate(path); 
     }
 
     function handleChangePwd(){
-        let path = '/user_profile/changePwd';
+        let path = '/change_password';
         navigate(path); 
     }
     
   return (
     <>
+    <Navbar/>
     <div className='profile'>
       <h1>Profile</h1>
 
